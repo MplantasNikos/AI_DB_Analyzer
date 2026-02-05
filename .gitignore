@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# virtual environment
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / results
+results/
+*.log
+
+# Models (αν πολύ μεγάλα)
+models/*.gguf
+
+# Environment files
+.env

@@ -1,0 +1,795 @@
+{
+  "database": "SalesDB",
+  "nodes": {
+    "dbo.persons": {
+      "schema": "dbo",
+      "table": "persons",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "max_length": 4,
+          "nullable": false
+        },
+        {
+          "name": "person_name",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": false
+        },
+        {
+          "name": "birt_date",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "phone",
+          "type": "varchar",
+          "max_length": 15,
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "outgoing_edges": [],
+      "incoming_edges": []
+    },
+    "Sales.Customers": {
+      "schema": "Sales",
+      "table": "Customers",
+      "columns": [
+        {
+          "name": "CustomerID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": false
+        },
+        {
+          "name": "FirstName",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "LastName",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "Country",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "Score",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "CustomerID"
+      ],
+      "outgoing_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Customers",
+          "to": "Sales.Orders",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Customers",
+          "to": "Sales.OrdersArchive",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ],
+      "incoming_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.Customers",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Customers",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ]
+    },
+    "Sales.Employees": {
+      "schema": "Sales",
+      "table": "Employees",
+      "columns": [
+        {
+          "name": "EmployeeID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": false
+        },
+        {
+          "name": "FirstName",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "LastName",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "Department",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "BirthDate",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "Gender",
+          "type": "char",
+          "max_length": 1,
+          "nullable": true
+        },
+        {
+          "name": "Salary",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "ManagerID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "EmployeeID"
+      ],
+      "outgoing_edges": [],
+      "incoming_edges": []
+    },
+    "Sales.Orders": {
+      "schema": "Sales",
+      "table": "Orders",
+      "columns": [
+        {
+          "name": "OrderID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": false
+        },
+        {
+          "name": "ProductID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "CustomerID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "SalesPersonID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "OrderDate",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "ShipDate",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "OrderStatus",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "ShipAddress",
+          "type": "varchar",
+          "max_length": 255,
+          "nullable": true
+        },
+        {
+          "name": "BillAddress",
+          "type": "varchar",
+          "max_length": 255,
+          "nullable": true
+        },
+        {
+          "name": "Quantity",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "Sales",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "CreationTime",
+          "type": "datetime2",
+          "max_length": 8,
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "OrderID"
+      ],
+      "outgoing_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "OrderID",
+          "ref_column": "OrderID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.Products",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.Customers",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "SalesPersonID",
+          "ref_column": "SalesPersonID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ],
+      "incoming_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Customers",
+          "to": "Sales.Orders",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "OrderID",
+          "ref_column": "OrderID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "SalesPersonID",
+          "ref_column": "SalesPersonID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Products",
+          "to": "Sales.Orders",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ]
+    },
+    "Sales.OrdersArchive": {
+      "schema": "Sales",
+      "table": "OrdersArchive",
+      "columns": [
+        {
+          "name": "OrderID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "ProductID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "CustomerID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "SalesPersonID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "OrderDate",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "ShipDate",
+          "type": "date",
+          "max_length": 3,
+          "nullable": true
+        },
+        {
+          "name": "OrderStatus",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "ShipAddress",
+          "type": "varchar",
+          "max_length": 255,
+          "nullable": true
+        },
+        {
+          "name": "BillAddress",
+          "type": "varchar",
+          "max_length": 255,
+          "nullable": true
+        },
+        {
+          "name": "Quantity",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "Sales",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        },
+        {
+          "name": "CreationTime",
+          "type": "datetime2",
+          "max_length": 8,
+          "nullable": true
+        },
+        {
+          "name": "row_number_",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        }
+      ],
+      "primary_key": [],
+      "outgoing_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "OrderID",
+          "ref_column": "OrderID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Products",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Customers",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Orders",
+          "column": "SalesPersonID",
+          "ref_column": "SalesPersonID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ],
+      "incoming_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Customers",
+          "to": "Sales.OrdersArchive",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "OrderID",
+          "ref_column": "OrderID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "CustomerID",
+          "ref_column": "CustomerID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.OrdersArchive",
+          "column": "SalesPersonID",
+          "ref_column": "SalesPersonID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Products",
+          "to": "Sales.OrdersArchive",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ]
+    },
+    "Sales.Products": {
+      "schema": "Sales",
+      "table": "Products",
+      "columns": [
+        {
+          "name": "ProductID",
+          "type": "int",
+          "max_length": 4,
+          "nullable": false
+        },
+        {
+          "name": "Product",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "Category",
+          "type": "varchar",
+          "max_length": 50,
+          "nullable": true
+        },
+        {
+          "name": "Price",
+          "type": "int",
+          "max_length": 4,
+          "nullable": true
+        }
+      ],
+      "primary_key": [
+        "ProductID"
+      ],
+      "outgoing_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Products",
+          "to": "Sales.Orders",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Products",
+          "to": "Sales.OrdersArchive",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ],
+      "incoming_edges": [
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.Orders",
+          "to": "Sales.Products",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        },
+        {
+          "type": "virtual_foreign_key",
+          "from": "Sales.OrdersArchive",
+          "to": "Sales.Products",
+          "column": "ProductID",
+          "ref_column": "ProductID",
+          "confidence": 0.6,
+          "reason": "Column name match heuristic (*ID)"
+        }
+      ]
+    }
+  },
+  "edges": [],
+  "virtual_edges": [
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Customers",
+      "to": "Sales.Orders",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Customers",
+      "to": "Sales.OrdersArchive",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.OrdersArchive",
+      "column": "OrderID",
+      "ref_column": "OrderID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.OrdersArchive",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.Products",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.Customers",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.OrdersArchive",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Orders",
+      "to": "Sales.OrdersArchive",
+      "column": "SalesPersonID",
+      "ref_column": "SalesPersonID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Orders",
+      "column": "OrderID",
+      "ref_column": "OrderID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Orders",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Products",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Customers",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Orders",
+      "column": "CustomerID",
+      "ref_column": "CustomerID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.OrdersArchive",
+      "to": "Sales.Orders",
+      "column": "SalesPersonID",
+      "ref_column": "SalesPersonID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Products",
+      "to": "Sales.Orders",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    },
+    {
+      "type": "virtual_foreign_key",
+      "from": "Sales.Products",
+      "to": "Sales.OrdersArchive",
+      "column": "ProductID",
+      "ref_column": "ProductID",
+      "confidence": 0.6,
+      "reason": "Column name match heuristic (*ID)"
+    }
+  ],
+  "metadata": {
+    "edge_types": [
+      "foreign_key",
+      "virtual_foreign_key"
+    ],
+    "confidence_scale": "0.0 – 1.0"
+  }
+}

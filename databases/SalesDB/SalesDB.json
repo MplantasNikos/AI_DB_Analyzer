@@ -1,0 +1,345 @@
+{
+  "database": "SalesDB",
+  "generated_at": "2026-01-28T20:58:31.804919",
+  "dialect": "sqlserver",
+  "schemas": {
+    "dbo": {
+      "persons": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "int",
+            "max_length": 4,
+            "nullable": false
+          },
+          {
+            "name": "person_name",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": false
+          },
+          {
+            "name": "birt_date",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "phone",
+            "type": "varchar",
+            "max_length": 15,
+            "nullable": true
+          }
+        ],
+        "primary_key": [
+          "id"
+        ],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      }
+    },
+    "Sales": {
+      "Customers": {
+        "columns": [
+          {
+            "name": "CustomerID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": false
+          },
+          {
+            "name": "FirstName",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "LastName",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "Country",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "Score",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          }
+        ],
+        "primary_key": [
+          "CustomerID"
+        ],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      },
+      "Employees": {
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": false
+          },
+          {
+            "name": "FirstName",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "LastName",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "Department",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "BirthDate",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "Gender",
+            "type": "char",
+            "max_length": 1,
+            "nullable": true
+          },
+          {
+            "name": "Salary",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "ManagerID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          }
+        ],
+        "primary_key": [
+          "EmployeeID"
+        ],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      },
+      "Orders": {
+        "columns": [
+          {
+            "name": "OrderID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": false
+          },
+          {
+            "name": "ProductID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "CustomerID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "SalesPersonID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "OrderDate",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "ShipDate",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "OrderStatus",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "ShipAddress",
+            "type": "varchar",
+            "max_length": 255,
+            "nullable": true
+          },
+          {
+            "name": "BillAddress",
+            "type": "varchar",
+            "max_length": 255,
+            "nullable": true
+          },
+          {
+            "name": "Quantity",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "Sales",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "CreationTime",
+            "type": "datetime2",
+            "max_length": 8,
+            "nullable": true
+          }
+        ],
+        "primary_key": [
+          "OrderID"
+        ],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      },
+      "OrdersArchive": {
+        "columns": [
+          {
+            "name": "OrderID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "ProductID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "CustomerID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "SalesPersonID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "OrderDate",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "ShipDate",
+            "type": "date",
+            "max_length": 3,
+            "nullable": true
+          },
+          {
+            "name": "OrderStatus",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "ShipAddress",
+            "type": "varchar",
+            "max_length": 255,
+            "nullable": true
+          },
+          {
+            "name": "BillAddress",
+            "type": "varchar",
+            "max_length": 255,
+            "nullable": true
+          },
+          {
+            "name": "Quantity",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "Sales",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          },
+          {
+            "name": "CreationTime",
+            "type": "datetime2",
+            "max_length": 8,
+            "nullable": true
+          },
+          {
+            "name": "row_number_",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          }
+        ],
+        "primary_key": [],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      },
+      "Products": {
+        "columns": [
+          {
+            "name": "ProductID",
+            "type": "int",
+            "max_length": 4,
+            "nullable": false
+          },
+          {
+            "name": "Product",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "Category",
+            "type": "varchar",
+            "max_length": 50,
+            "nullable": true
+          },
+          {
+            "name": "Price",
+            "type": "int",
+            "max_length": 4,
+            "nullable": true
+          }
+        ],
+        "primary_key": [
+          "ProductID"
+        ],
+        "foreign_keys": [],
+        "indexes": [],
+        "constraints": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1244 @@
+{
+  "Sales.Customers": {
+    "row_count": 6,
+    "column_count": 5,
+    "columns": {
+      "CustomerID": {
+        "type": "int",
+        "unique_count": 6,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 1,
+            "count": 1
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 4,
+            "count": 1
+          },
+          {
+            "value": 5,
+            "count": 1
+          },
+          {
+            "value": 6,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 7,
+        "avg": 4
+      },
+      "FirstName": {
+        "type": "varchar",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Anna",
+            "count": 2
+          },
+          {
+            "value": "SAM",
+            "count": 1
+          },
+          {
+            "value": "Mary",
+            "count": 1
+          },
+          {
+            "value": "Mark",
+            "count": 1
+          },
+          {
+            "value": "Jossef",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "LastName": {
+        "type": "varchar",
+        "unique_count": 4,
+        "null_count": 2,
+        "top_values": [
+          {
+            "value": null,
+            "count": 2
+          },
+          {
+            "value": "swa",
+            "count": 1
+          },
+          {
+            "value": "Schwarz",
+            "count": 1
+          },
+          {
+            "value": "sam",
+            "count": 1
+          },
+          {
+            "value": "Adams",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Country": {
+        "type": "varchar",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "USA",
+            "count": 4
+          },
+          {
+            "value": "Germany",
+            "count": 2
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Score": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 3,
+        "top_values": [
+          {
+            "value": null,
+            "count": 3
+          },
+          {
+            "value": 750,
+            "count": 1
+          },
+          {
+            "value": 500,
+            "count": 1
+          },
+          {
+            "value": 350,
+            "count": 1
+          }
+        ],
+        "min": 350,
+        "max": 750,
+        "avg": 533
+      }
+    },
+    "importance_score": 30
+  },
+  "Sales.Employees": {
+    "row_count": 5,
+    "column_count": 8,
+    "columns": {
+      "EmployeeID": {
+        "type": "int",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 1,
+            "count": 1
+          },
+          {
+            "value": 2,
+            "count": 1
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 4,
+            "count": 1
+          },
+          {
+            "value": 5,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 5,
+        "avg": 3
+      },
+      "FirstName": {
+        "type": "varchar",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Michael",
+            "count": 1
+          },
+          {
+            "value": "Mary",
+            "count": 1
+          },
+          {
+            "value": "Kevin",
+            "count": 1
+          },
+          {
+            "value": "Frank",
+            "count": 1
+          },
+          {
+            "value": "Carol",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "LastName": {
+        "type": "varchar",
+        "unique_count": 4,
+        "null_count": 1,
+        "top_values": [
+          {
+            "value": "Ray",
+            "count": 1
+          },
+          {
+            "value": "Lee",
+            "count": 1
+          },
+          {
+            "value": "Brown",
+            "count": 1
+          },
+          {
+            "value": "Baker",
+            "count": 1
+          },
+          {
+            "value": null,
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Department": {
+        "type": "varchar",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Sales",
+            "count": 3
+          },
+          {
+            "value": "Marketing",
+            "count": 2
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "BirthDate": {
+        "type": "date",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "1988-12-05",
+            "count": 1
+          },
+          {
+            "value": "1986-01-05",
+            "count": 1
+          },
+          {
+            "value": "1982-02-11",
+            "count": 1
+          },
+          {
+            "value": "1977-02-10",
+            "count": 1
+          },
+          {
+            "value": "1972-11-25",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Gender": {
+        "type": "char",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "M",
+            "count": 3
+          },
+          {
+            "value": "F",
+            "count": 2
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Salary": {
+        "type": "int",
+        "unique_count": 4,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 55000,
+            "count": 2
+          },
+          {
+            "value": 90000,
+            "count": 1
+          },
+          {
+            "value": 75000,
+            "count": 1
+          },
+          {
+            "value": 65000,
+            "count": 1
+          }
+        ],
+        "min": 55000,
+        "max": 90000,
+        "avg": 68000
+      },
+      "ManagerID": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 1,
+        "top_values": [
+          {
+            "value": 1,
+            "count": 2
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 2,
+            "count": 1
+          },
+          {
+            "value": null,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 3,
+        "avg": 1
+      }
+    },
+    "importance_score": 40
+  },
+  "Sales.Products": {
+    "row_count": 5,
+    "column_count": 4,
+    "columns": {
+      "ProductID": {
+        "type": "int",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 101,
+            "count": 1
+          },
+          {
+            "value": 102,
+            "count": 1
+          },
+          {
+            "value": 103,
+            "count": 1
+          },
+          {
+            "value": 104,
+            "count": 1
+          },
+          {
+            "value": 105,
+            "count": 1
+          }
+        ],
+        "min": 101,
+        "max": 105,
+        "avg": 103
+      },
+      "Product": {
+        "type": "varchar",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Tire",
+            "count": 1
+          },
+          {
+            "value": "Socks",
+            "count": 1
+          },
+          {
+            "value": "Gloves",
+            "count": 1
+          },
+          {
+            "value": "Caps",
+            "count": 1
+          },
+          {
+            "value": "Bottle",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Category": {
+        "type": "varchar",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Clothing",
+            "count": 3
+          },
+          {
+            "value": "Accessories",
+            "count": 2
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Price": {
+        "type": "int",
+        "unique_count": 5,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 30,
+            "count": 1
+          },
+          {
+            "value": 25,
+            "count": 1
+          },
+          {
+            "value": 20,
+            "count": 1
+          },
+          {
+            "value": 15,
+            "count": 1
+          },
+          {
+            "value": 10,
+            "count": 1
+          }
+        ],
+        "min": 10,
+        "max": 30,
+        "avg": 20
+      }
+    },
+    "importance_score": 20
+  },
+  "Sales.Orders": {
+    "row_count": 10,
+    "column_count": 12,
+    "columns": {
+      "OrderID": {
+        "type": "int",
+        "unique_count": 10,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 1,
+            "count": 1
+          },
+          {
+            "value": 2,
+            "count": 1
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 4,
+            "count": 1
+          },
+          {
+            "value": 5,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 10,
+        "avg": 5
+      },
+      "ProductID": {
+        "type": "int",
+        "unique_count": 4,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 101,
+            "count": 4
+          },
+          {
+            "value": 102,
+            "count": 3
+          },
+          {
+            "value": 104,
+            "count": 2
+          },
+          {
+            "value": 105,
+            "count": 1
+          }
+        ],
+        "min": 101,
+        "max": 105,
+        "avg": 102
+      },
+      "CustomerID": {
+        "type": "int",
+        "unique_count": 4,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 3,
+            "count": 3
+          },
+          {
+            "value": 2,
+            "count": 3
+          },
+          {
+            "value": 1,
+            "count": 3
+          },
+          {
+            "value": 4,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 4,
+        "avg": 2
+      },
+      "SalesPersonID": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 3,
+            "count": 5
+          },
+          {
+            "value": 5,
+            "count": 4
+          },
+          {
+            "value": 1,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 5,
+        "avg": 3
+      },
+      "OrderDate": {
+        "type": "date",
+        "unique_count": 10,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2025-02-05",
+            "count": 1
+          },
+          {
+            "value": "2025-02-01",
+            "count": 1
+          },
+          {
+            "value": "2025-01-20",
+            "count": 1
+          },
+          {
+            "value": "2025-01-10",
+            "count": 1
+          },
+          {
+            "value": "2025-01-05",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "ShipDate": {
+        "type": "date",
+        "unique_count": 8,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2025-01-25",
+            "count": 2
+          },
+          {
+            "value": "2025-02-27",
+            "count": 2
+          },
+          {
+            "value": "2025-02-10",
+            "count": 1
+          },
+          {
+            "value": "2025-02-05",
+            "count": 1
+          },
+          {
+            "value": "2025-01-10",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "OrderStatus": {
+        "type": "varchar",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Shipped",
+            "count": 5
+          },
+          {
+            "value": "Delivered",
+            "count": 5
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "ShipAddress": {
+        "type": "varchar",
+        "unique_count": 8,
+        "null_count": 2,
+        "top_values": [
+          {
+            "value": null,
+            "count": 2
+          },
+          {
+            "value": "3768 Door Way",
+            "count": 1
+          },
+          {
+            "value": "2947 Vine Lane",
+            "count": 1
+          },
+          {
+            "value": "250 Race Court",
+            "count": 1
+          },
+          {
+            "value": "1792 Belmont Rd.",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "BillAddress": {
+        "type": "varchar",
+        "unique_count": 4,
+        "null_count": 4,
+        "top_values": [
+          {
+            "value": null,
+            "count": 4
+          },
+          {
+            "value": "",
+            "count": 3
+          },
+          {
+            "value": "8157 W. Book",
+            "count": 1
+          },
+          {
+            "value": "4311 Clay Rd",
+            "count": 1
+          },
+          {
+            "value": "1226 Shoe St.",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Quantity": {
+        "type": "int",
+        "unique_count": 4,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 2,
+            "count": 5
+          },
+          {
+            "value": 1,
+            "count": 3
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 0,
+            "count": 1
+          }
+        ],
+        "min": 0,
+        "max": 3,
+        "avg": 1
+      },
+      "Sales": {
+        "type": "int",
+        "unique_count": 8,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 20,
+            "count": 2
+          },
+          {
+            "value": 60,
+            "count": 2
+          },
+          {
+            "value": 50,
+            "count": 1
+          },
+          {
+            "value": 30,
+            "count": 1
+          },
+          {
+            "value": 25,
+            "count": 1
+          }
+        ],
+        "min": 10,
+        "max": 90,
+        "avg": 38
+      },
+      "CreationTime": {
+        "type": "datetime2",
+        "unique_count": 10,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2025-02-06T15:34:57",
+            "count": 1
+          },
+          {
+            "value": "2025-02-01T14:02:41",
+            "count": 1
+          },
+          {
+            "value": "2025-01-20T05:50:33",
+            "count": 1
+          },
+          {
+            "value": "2025-01-10T18:24:08",
+            "count": 1
+          },
+          {
+            "value": "2025-01-05T23:22:04",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      }
+    },
+    "importance_score": 120
+  },
+  "Sales.OrdersArchive": {
+    "row_count": 10,
+    "column_count": 13,
+    "columns": {
+      "OrderID": {
+        "type": "int",
+        "unique_count": 7,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 6,
+            "count": 3
+          },
+          {
+            "value": 4,
+            "count": 2
+          },
+          {
+            "value": 5,
+            "count": 1
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 2,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 7,
+        "avg": 4
+      },
+      "ProductID": {
+        "type": "int",
+        "unique_count": 4,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 104,
+            "count": 3
+          },
+          {
+            "value": 101,
+            "count": 3
+          },
+          {
+            "value": 105,
+            "count": 2
+          },
+          {
+            "value": 102,
+            "count": 2
+          }
+        ],
+        "min": 101,
+        "max": 105,
+        "avg": 102
+      },
+      "CustomerID": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 3,
+            "count": 5
+          },
+          {
+            "value": 1,
+            "count": 3
+          },
+          {
+            "value": 2,
+            "count": 2
+          }
+        ],
+        "min": 1,
+        "max": 3,
+        "avg": 2
+      },
+      "SalesPersonID": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 5,
+            "count": 5
+          },
+          {
+            "value": 3,
+            "count": 4
+          },
+          {
+            "value": 4,
+            "count": 1
+          }
+        ],
+        "min": 3,
+        "max": 5,
+        "avg": 4
+      },
+      "OrderDate": {
+        "type": "date",
+        "unique_count": 7,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2024-05-05",
+            "count": 3
+          },
+          {
+            "value": "2024-04-20",
+            "count": 2
+          },
+          {
+            "value": "2024-05-01",
+            "count": 1
+          },
+          {
+            "value": "2024-04-10",
+            "count": 1
+          },
+          {
+            "value": "2024-04-05",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "ShipDate": {
+        "type": "date",
+        "unique_count": 6,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2024-04-25",
+            "count": 3
+          },
+          {
+            "value": "2024-05-10",
+            "count": 3
+          },
+          {
+            "value": "2024-06-20",
+            "count": 1
+          },
+          {
+            "value": "2024-05-05",
+            "count": 1
+          },
+          {
+            "value": "2024-04-10",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "OrderStatus": {
+        "type": "varchar",
+        "unique_count": 2,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Shipped",
+            "count": 6
+          },
+          {
+            "value": "Delivered",
+            "count": 4
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "ShipAddress": {
+        "type": "varchar",
+        "unique_count": 7,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "543 Belmont Rd.",
+            "count": 3
+          },
+          {
+            "value": "987 Victory Lane",
+            "count": 2
+          },
+          {
+            "value": "789 Maple St",
+            "count": 1
+          },
+          {
+            "value": "456 Elm St",
+            "count": 1
+          },
+          {
+            "value": "345 Oak St",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "BillAddress": {
+        "type": "varchar",
+        "unique_count": 7,
+        "null_count": 1,
+        "top_values": [
+          {
+            "value": "",
+            "count": 2
+          },
+          {
+            "value": "3768 Door Way",
+            "count": 2
+          },
+          {
+            "value": "678 Pine St",
+            "count": 1
+          },
+          {
+            "value": "456 Billing St",
+            "count": 1
+          },
+          {
+            "value": "222 Billing St",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "Quantity": {
+        "type": "int",
+        "unique_count": 3,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 2,
+            "count": 6
+          },
+          {
+            "value": 1,
+            "count": 3
+          },
+          {
+            "value": 0,
+            "count": 1
+          }
+        ],
+        "min": 0,
+        "max": 2,
+        "avg": 1
+      },
+      "Sales": {
+        "type": "int",
+        "unique_count": 6,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 60,
+            "count": 3
+          },
+          {
+            "value": 50,
+            "count": 3
+          },
+          {
+            "value": 25,
+            "count": 1
+          },
+          {
+            "value": 20,
+            "count": 1
+          },
+          {
+            "value": 15,
+            "count": 1
+          }
+        ],
+        "min": 10,
+        "max": 60,
+        "avg": 40
+      },
+      "CreationTime": {
+        "type": "datetime2",
+        "unique_count": 10,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "2024-05-01T14:02:41",
+            "count": 1
+          },
+          {
+            "value": "2024-04-20T14:50:33",
+            "count": 1
+          },
+          {
+            "value": "2024-04-20T05:50:33",
+            "count": 1
+          },
+          {
+            "value": "2024-04-10T18:24:08",
+            "count": 1
+          },
+          {
+            "value": "2024-04-05T23:22:04",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "row_number_": {
+        "type": "int",
+        "unique_count": 0,
+        "null_count": 10,
+        "top_values": [
+          {
+            "value": null,
+            "count": 10
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      }
+    },
+    "importance_score": 130
+  },
+  "dbo.persons": {
+    "row_count": 7,
+    "column_count": 4,
+    "columns": {
+      "id": {
+        "type": "int",
+        "unique_count": 7,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": 1,
+            "count": 1
+          },
+          {
+            "value": 2,
+            "count": 1
+          },
+          {
+            "value": 3,
+            "count": 1
+          },
+          {
+            "value": 4,
+            "count": 1
+          },
+          {
+            "value": 5,
+            "count": 1
+          }
+        ],
+        "min": 1,
+        "max": 7,
+        "avg": 4
+      },
+      "person_name": {
+        "type": "varchar",
+        "unique_count": 6,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "Anna",
+            "count": 2
+          },
+          {
+            "value": "SAM",
+            "count": 1
+          },
+          {
+            "value": "Mary",
+            "count": 1
+          },
+          {
+            "value": "Mark",
+            "count": 1
+          },
+          {
+            "value": "Kevin",
+            "count": 1
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "birt_date": {
+        "type": "date",
+        "unique_count": 0,
+        "null_count": 7,
+        "top_values": [
+          {
+            "value": null,
+            "count": 7
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      },
+      "phone": {
+        "type": "varchar",
+        "unique_count": 1,
+        "null_count": 0,
+        "top_values": [
+          {
+            "value": "unknown",
+            "count": 7
+          }
+        ],
+        "min": null,
+        "max": null,
+        "avg": null
+      }
+    },
+    "importance_score": 28
+  }
+}
