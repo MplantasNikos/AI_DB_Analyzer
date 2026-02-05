@@ -23,7 +23,9 @@ Its goal is to understand the database structure, the relationships between tabl
    - Splits data into smaller chunks and generates embeddings for efficient AI processing.
 
 5. **Load LLM (Mistral 7B)**  
-   - Loads the language model that will analyze user questions and generate SQL queries.
+   - Loads the language model that will analyze user questions and generate SQL queries.  
+   - The model used is **`mistral-7b-instruct-v0.1.Q4_K_M.gguf`**, obtained from [Mistral AI](https://mistral.ai/) official releases.  
+   - We chose this model because it is **open-weight, instruction-tuned, and optimized for inference**, allowing fast responses even on GPU.
 
 6. **Query AI**  
    - Users provide natural language questions (e.g., "Which customers have more than 5 orders?").  
@@ -31,25 +33,21 @@ Its goal is to understand the database structure, the relationships between tabl
 
 7. **Interactive Loop & Results**  
    - Users can submit multiple queries until they choose to exit.  
-   - Results are stored in the `results/` folder for future reference.
+   - All results are saved in the `results/` folder for future reference.
 
 ---
 
-## 🔹 Why it was designed this way
+## 🔹 Project Folder Structure
 
-- **Large databases**: Built to handle hundreds or even thousands of tables.  
-- **Understanding relationships**: The program doesn’t just run SQL; it understands **how tables are joined**.  
-- **Extensibility**: Can integrate different models or connect to a web interface later.
-
----
-
-## 🔹 What we achieve
-
-- Fast understanding and analysis of database structures.  
-- Automatic generation of SQL queries from natural language.  
-- Storage and tracking of results for future analysis.  
-- Modular design for easy maintenance and extension.
-
----
-
-This tool is ideal for developers, data analysts, or teams seeking **intelligent automation in database querying** without writing SQL manually every time.
+```text
+AI_DB_Analyzer/
+│
+├── run.bat                # Run the project with one click (Windows)
+├── main.py                # Main program script
+├── core/                  # Core modules: schema, graph, stats, chunks, query AI
+├── databases/             # Database folders with metadata and schema files
+├── models/                # LLM models (e.g., mistral-7b-instruct)
+├── results/               # Generated SQL queries and outputs
+├── requirements.txt       # Python dependencies
+├── .env                   # Environment variables (DB name, stats mode)
+└── venv/                  # Virtual environment (excluded from GitHub)
